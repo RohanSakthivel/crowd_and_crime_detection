@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Access and Reporting</title>
+    <!-- Include Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link to your custom CSS file -->
+    
+</head>
+<body>
+    <style>
+#canvasElement{
+    width: 600px;
+    height: 300px;
+}
+        /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: blanchedalmond;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+
+.sidebar {
+    width:350px;
+    padding:18%;
+    position:fixed;
+    background-color: #333;
+    height: 100%;
+    color: #fff;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: black;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+    </style>
+   <div class="navv"> <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        
+        <video id="videoElement" autoplay></video>
+       
+    </nav>
+   </div>
+
+    <!-- Bootstrap Container for Content -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <h1>weapon Detection</h1>
+                <!-- Place camera access here -->
+
+                <!-- Add a Button -->
+                <canvas id="canvasElement"></canvas>
+                <button id="startButton" class="btn btn-primary">Start Detection</button>
+                <button id="stopButton" style="display: none;"class="btn btn-primary">Stop Detection</button>
+                <div id="output"></div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery from CDN -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
